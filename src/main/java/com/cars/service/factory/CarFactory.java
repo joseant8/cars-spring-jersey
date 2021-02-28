@@ -1,5 +1,6 @@
-package com.cars.service;
+package com.cars.service.factory;
 
+import com.cars.exceptions.CarNotExistException;
 import com.cars.model.Car;
 import com.cars.service.facade.CarFacade;
 
@@ -17,7 +18,7 @@ public class CarFactory {
             case COMBUSTION:
                 return CarFacade.createCombustion();
             default:
-                throw new Exception("El tipo de coche solicitado no existe.");
+                throw new CarNotExistException("El tipo de coche solicitado no existe.");
         }
     }
 

@@ -1,8 +1,9 @@
 package com.cars.controller;
 
 import com.cars.CarsSpringJerseyApplication;
+import com.cars.exceptions.CarNotExistException;
 import com.cars.model.Car;
-import com.cars.service.CarFactory;
+import com.cars.service.factory.CarFactory;
 import org.springframework.stereotype.Component;
 
 import javax.ws.rs.*;
@@ -21,12 +22,12 @@ public class CarController {
     @GET
     @Path("/{tipo}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response create2(@PathParam("tipo") String tipo){
+    public Response create2(@PathParam("tipo") String tipo) throws Exception {
 
         try{
             Car car = CarFactory.createCar(tipo);
             return Response.status(Response.Status.OK).entity(car).build();
-        }catch(Exception e){
+        }catch(CarNotExistException e){
             logger.error(e.getMessage());
             return Response.status(Response.Status.NOT_FOUND).entity(e.getMessage()).build();
         }

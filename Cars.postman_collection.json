@@ -1,0 +1,93 @@
+{
+	"info": {
+		"_postman_id": "108321ac-43f8-45eb-a238-fbd56ed45e14",
+		"name": "Cars",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getCocheHibrido",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/cars/hibrido",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cars",
+						"hibrido"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCocheElectrico",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/cars/electrico",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cars",
+						"electrico"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCocheCombustion",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/cars/combustion",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cars",
+						"combustion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCocheNoExisteTipo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/cars/meloinvento",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cars",
+						"meloinvento"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
