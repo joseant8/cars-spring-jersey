@@ -22,6 +22,15 @@ public class CarFactory {
         }
     }
 
+    public static String getELECTRICO() {
+        return ELECTRICO;
+    }
 
+    public static String getHIBRIDO() {
+        return HIBRIDO;
+    }
 
+    public static String getCOMBUSTION() {
+        return COMBUSTION;
+    }
 }

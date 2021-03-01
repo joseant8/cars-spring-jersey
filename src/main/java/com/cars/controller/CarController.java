@@ -22,7 +22,7 @@ public class CarController {
     @GET
     @Path("/{tipo}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response create2(@PathParam("tipo") String tipo) throws Exception {
+    public Response getCar(@PathParam("tipo") String tipo) throws Exception {
 
         try{
             Car car = CarFactory.createCar(tipo);

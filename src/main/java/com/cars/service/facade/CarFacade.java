@@ -3,6 +3,7 @@ package com.cars.service.facade;
 import com.cars.model.Car;
 import com.cars.model.CombustionCar;
 import com.cars.model.ElectricCar;
+import com.cars.model.HybridCar;
 
 public class CarFacade {
 
@@ -43,7 +44,7 @@ public class CarFacade {
         Engine engine = new HybridEngine();
         FuelDeposit fueldeposit = new FuelDeposit(DEPOSIT_HYBRID_CAPACITY);
 
-        Car car = new CombustionCar(battery, engine, fueldeposit);
+        Car car = new HybridCar(battery, engine, fueldeposit);
 
         start(car);
 
